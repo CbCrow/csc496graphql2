@@ -40,7 +40,9 @@ module.exports = {
         // url: `https://api.keeneland.com/graphql`,
         // url: "http://10.89.0.24/graphql",
         url: `https://csc496f22demo.tldr.dev/graphql`,
+ 
       },
     },
+    // or maybe use https://www.gatsbyjs.com/plugins/gatsby-source-drupal-graphql/
   ]
 };

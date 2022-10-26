@@ -38,31 +38,33 @@ exports.createPages = ({ actions, graphql }) => {
     resolve(
       graphql(
         `{
-          query MyQuery {
-            nodeRecipes(first: 100) {
-              edges {
-                node {
-                  changed
-                  id
-                  cookingTime
-                  created
-                  path
-                  status
-                  title
+            Drupal {
+              nodeRecipes(first: 100) {
+                edges {
+                  node {
+                    changed
+                    id
+                    cookingTime
+                    created
+                    path
+                    status
+                    title
+                  }
                 }
               }
             }
-          }
-`
+          } 
+        `
       ).then(result => {
         // shows during build/dev
         //console.log("RESULT");
-        //console.log(result);
+        console.log(result)
         if (result.errors) {
+          console.log(result.errors)
           reject(result.errors)
         }
-       
-        const pages = result.data.nodeRecipes.edges; 
+        console.log(result.data)
+        const pages = result.data.Drupal.nodeRecipes.edges; 
 
         
         //result.data.allNodeHorse.edges.forEach(({ node }, index) => {
@@ -77,8 +79,6 @@ exports.createPages = ({ actions, graphql }) => {
             component: pageTemplate,
             context: {
               nid: node.id,  
-              prev: prev,
-              next: next,
               data: node, 
             },
           })
