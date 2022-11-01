@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkclass_demo=self.webpackChunkclass_demo||[]).push([[238],{5149:function(e,o,n){n.r(o);n(1082);var l=n(7294);o.default=function(e){var o,n={nodeFood:e.pageContext.data};return console.log(n),l.createElement("h2",null,null===(o=n.nodeFood)||void 0===o?void 0:o.title)}}}]);
+//# sourceMappingURL=component---src-pages-recipe-js-cccd2f741323276c4953.js.map

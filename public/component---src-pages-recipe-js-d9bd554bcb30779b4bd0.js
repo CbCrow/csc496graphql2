@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkclass_demo=self.webpackChunkclass_demo||[]).push([[238],{5149:function(e,n,o){o.r(n);o(1082);var l=o(7294);n.default=function(e){var n={nodeFood:e.pageContext.data};return console.log(n),l.createElement("div",null,l.createElement("h1",null,n.nodeFood.title),l.createElement("p",null,n.nodeFood.cookingTime))}}}]);
+//# sourceMappingURL=component---src-pages-recipe-js-d9bd554bcb30779b4bd0.js.map
