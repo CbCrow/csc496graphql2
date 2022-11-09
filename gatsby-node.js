@@ -65,11 +65,15 @@ exports.createPages = ({ actions, graphql }) => {
                   recipeCategory {
                     name
                   }
+                  summary {
+                    value
+                  }
                 }
               }
             }
           }
         }
+        
         
 
 

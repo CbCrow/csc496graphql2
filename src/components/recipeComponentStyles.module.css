@@ -1,0 +1,99 @@
+/* styles for recipe page components */
+.category {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.category-ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.cooking-time {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.prep-time {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+/* ciruclar pic */
+.pictureCircle {
+  border-radius: 25%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.difficulty {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.servings {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.tags-ul {
+  display: inline-block;
+  text-align: left;
+}
+
+
+/* center aligned title */
+.title-sty {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+

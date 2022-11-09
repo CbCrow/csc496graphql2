@@ -1,5 +1,15 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import Tags from '../components/tags'
+import Category from '../components/category'
+import PictureComponent from '../components/picture'
+import CookTime from '../components/cooktime' 
+import Servings from '../components/servings'
+import PrepTime from '../components/preptime'
+import Difficulty from '../components/difficulty'
+import Summary from '../components/description'
+import { titleSty } from '../components/recipeComponentStyles.module.css'
+
 
 const pageTemplate = props => {
 
@@ -35,7 +45,9 @@ const pageTemplate = props => {
     //             name
     //           }
     //           recipeCategory {
-    //             name
+    //           }
+    //           summary {
+    //             value
     //           }
     //         }
     //       }
@@ -43,57 +55,28 @@ const pageTemplate = props => {
     //   }
     // }
     
-
+    
+    //use components to display data
     <div>
-      <h1>{data.nodeFood.title}</h1>
-      <p>Cooking time is {data.nodeFood.cookingTime} Minutes</p>
-      <p>Prep times is {data.nodeFood.preparationTime} Minutes</p>
-      <p>Difficulty {data.nodeFood.difficulty}</p>
-      <p>{data.nodeFood.numberOfServings} Servings</p>
-      <p>Ingredients dont work at all in the graphiql explorer so they are not here at the moment.</p>
-      <img src={data.nodeFood.mediaImage.mediaImage.url} />
-      <p>Tags</p>
-      <ul>
-        {data.nodeFood.tags.map((tag, index) => (
-          <li key={index}>{tag.name}</li>
-        ))}
-      </ul>
-      <p>Categories</p>
-      <ul>
-        {data.nodeFood.recipeCategory.map((category, index) => (
-          <li key={index}>{category.name}</li>
-        ))}
-      </ul>
-      
+      <h1 className={titleSty}>{data.nodeFood.title}</h1>
+      <PictureComponent image={data.nodeFood.mediaImage.mediaImage.url} />
+      <Summary summary={data.nodeFood.summary.value} />
+      <Servings servings={data.nodeFood.numberOfServings} />
+      <br />
+      <PrepTime preparationTime={data.nodeFood.preparationTime} />
+      <CookTime cookingTime ={data.nodeFood.cookingTime} />
+      <br />
+      <Difficulty difficulty={data.nodeFood.difficulty} />
+      <Category category={data.nodeFood.recipeCategory} />
+      <Tags tags={data.nodeFood.tags} />
     </div>
+    
+    
+
+
   )
 }
 
 
 
 export default pageTemplate 
-/*
-export const query = graphql`
-query MyQuery($nid: string) {
-  Drupal {
-       nodeRecipe(id: { eq: $nid } ) {
-                  changed
-                  id
-                  cookingTime
-                  created
-                  path
-                  status
-                  title
-
-          }
-
-  }
-}
-
-
-
-
-`
-
-
-*/
